@@ -1,0 +1,264 @@
+:root {
+    --amarillo: #EAC926;
+    --azul: #03264C;
+    --celeste: #1259c3;
+    --gris-oscuro: #666;
+    --gris-claro: #ebebeb;
+    --verde: #39b54a;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--gris-claro);
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    color: var(--celeste);
+}
+ul li{
+    list-style-type: none;
+}
+
+/*__________ HEADER __________________*/
+header {
+    background-color: var(--amarillo);
+    padding-bottom: 50px;
+}
+
+.header-superior {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.logo {
+    width: 40vw;
+    height: 30vw;
+    margin-right: 10px;
+}
+.buscador {
+    width: 60vw;
+    color: var(--gris-oscuro);
+    display: flex;
+    align-items: center;
+    font-size: x-small;
+}
+
+header .input{
+    background-color: #fff;
+    border: 1px solid #000;
+    color: var(--gris-oscuro);
+    padding: 5px;
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.icono-buscador {
+    background-color: #fff;
+    color: var(--gris-oscuro);
+    position: relative;
+    right: 25px;
+    padding: 3px;
+}
+
+nav {
+    display: none;
+    padding-left: 5px;
+    position: relative;
+
+    font-size: smaller;
+    line-height: 12px;
+}
+.nav-izq{
+    position: absolute;
+    left: 10px;
+}
+.nav-der{
+    position: absolute;
+    right: 10px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+}
+li{
+    margin-right: 15px;
+}
+
+.formaPago {
+    color: #000;
+    display: none;
+    position: relative;
+    top: 5vw;
+    text-align: center;
+    margin-right: 5px;
+    font-size: small;
+}
+
+.formaPago2 {
+    text-align: center;
+    color: #000;
+    display: block;
+}
+
+
+.burger-menu {
+    text-align: center;
+}
+
+.burger-menu i {
+    background-color: #1259c3;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+}
+/*________________ MAIN ___________*/
+main{
+    background-color: var(--gris-claro);
+    margin-top: 15px;
+}
+.carrito{
+    background-color:#fff;
+    padding: 30px;
+    margin: 2px  40px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+article{
+    padding: 30px;
+    text-align: center;
+}
+article img{
+    width: 100%;
+}
+.descripciones{
+    font-size: small;
+}
+.precio{
+    text-decoration: line-through;
+    color: red;
+}
+.rebajado{
+    color: var(--verde);
+}
+.remover{
+    background-color: rgba(189, 2, 2, 0.829);
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    color: #fff;
+    padding: 1px 5px;
+    border-radius: 5px;
+}
+.remover:hover{
+    background-color: red;
+}
+.total{
+    text-align: end;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+.comprar{
+    background-color: rgba(5, 5, 219, 0.938);
+    padding: 5px 40px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    color: #fff;
+    text-align: center;
+}
+.comprar:hover{
+    background-color: #0022AA;
+}
+
+/*______________ FOOTER ___________*/
+footer{
+    background-color: #fff;
+}
+footer section{
+    display: flex;
+}
+.texto-footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+footer i {
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    color: var(--celeste);
+}
+footer p{
+    display: none;
+}
+/*__________ BREAKPOINTS ____________*/
+@media (min-width: 361px) {
+    nav {
+        display: block;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+    footer p{
+        display: block;
+    }
+    .formaPago {
+        display: block;
+    }
+    .formaPago2 {
+        display: none;
+    }
+    .logo {
+        width: 40vw;
+        height: 20vw;
+    }
+    .buscador{
+        font-size: medium;
+    }
+    article img{
+        width: 30%;
+    }
+
+}
+
+@media (min-width: 769px) {
+    .productos {
+        justify-content: space-between;
+    }
+    footer i{
+        transition: all, 0.5s;
+    }
+    .texto-footer:hover i{
+        color: var(--azul);
+    }
+    .logo {
+        width: 30vw;
+        height: 15vw;
+    }
+    ul {
+        flex-direction: row;
+    }
+    .formaPago{
+        font-size: medium;
+    }
+    .remover{
+        position: absolute;
+        right: 120px;
+    }
+    article{
+        text-align: start;
+    }
+    article img{
+        width: 15%;
+    }
+}
